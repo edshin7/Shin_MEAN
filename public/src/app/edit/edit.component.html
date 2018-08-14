@@ -1,0 +1,10 @@
+<div>
+  <h2>Edit Product</h2>
+  <p *ngFor="let error of errors" style= "color: red">{{error.message}}</p>
+  <form *ngIf="product" (submit)="editProduct(product._id)">
+    <p>Product name: <input type="text" name="product.name" [(ngModel)]="product.name"></p>
+    <p>Price: $<input type="number" name="product.price" [(ngModel)]="product.price"></p>
+    <p>Image Url: <input type="text" name="product.image_url" [(ngModel)]="product.image_url"></p>
+    <input type="submit" value="Submit">
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<div>
+  <h2>Add Product</h2>
+  <p *ngFor="let error of errors" style= "color: red">{{error.message}}</p>
+  <form (submit)="addProduct()">
+    <p>Product name: <input type="text" name="product.name" [(ngModel)]="product.name" value="{{product.name}}"></p>
+    <p>Price: $<input type="number" name="product.price" [(ngModel)]="product.price" value="{{product.price}}"></p>
+    <p>Image Url: <input type="text" name="product.image_url" [(ngModel)]="product.image_url" value="{{product.image_url}}"></p>
+    <input type="submit" value="Update">
+  </form>
+</div>
